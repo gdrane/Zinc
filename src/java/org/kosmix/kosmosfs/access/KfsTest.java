@@ -59,7 +59,7 @@ public class KfsTest
             }
             String path = new String(basedir + "/foo.1");
             KfsOutputChannel outputChannel;
-            if ((outputChannel = kfsAccess.kfs_create(path)) == null) {
+            if ((outputChannel = kfsAccess.kfs_create(path,null)) == null) {
                 System.out.println("Unable to call create");
                 System.exit(1);
             }
@@ -143,7 +143,7 @@ public class KfsTest
                 System.exit(1);
             }
 
-            KfsOutputChannel outputChannel1 = kfsAccess.kfs_create(path);
+            KfsOutputChannel outputChannel1 = kfsAccess.kfs_create(path,null);
 
             if (outputChannel1 != null) {
                 outputChannel1.close();
