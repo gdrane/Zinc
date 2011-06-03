@@ -1,2 +1,0 @@
-/usr/bin/ar cr libkfsCommon.a  CMakeFiles/kfsCommon.dir/BufferedLogWriter.o CMakeFiles/kfsCommon.dir/hsieh_hash.o CMakeFiles/kfsCommon.dir/log.o CMakeFiles/kfsCommon.dir/properties.o CMakeFiles/kfsCommon.dir/Version.o
-/usr/bin/ranlib libkfsCommon.a
