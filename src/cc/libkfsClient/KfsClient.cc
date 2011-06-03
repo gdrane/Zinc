@@ -1431,6 +1431,9 @@ KfsClientImpl::Create(const char *pathname, int numReplicas, bool exclusive, con
 
     kfsFileId_t parentFid;
     string filename;
+    KFS_LOG_VA_DEBUG("SOWMYA New handler created:%s",optionalHandler.c_str());
+    KFS_LOG_VA_INFO("SOWMYA New handler created:%s",optionalHandler.c_str());
+    KFS_LOG_VA_ERROR("SOWMYA New handler created:%s",optionalHandler.c_str());
     int res = GetPathComponents(pathname, &parentFid, filename);
     if (res < 0) {
 	KFS_LOG_VA_DEBUG("status %d for pathname %s", res, pathname);

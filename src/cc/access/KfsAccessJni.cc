@@ -108,7 +108,7 @@ extern "C" {
         JNIEnv *jenv, jclass jcls, jlong jptr, jstring jpath, jstring jmode, jint jnumReplicas);
 
     jint Java_org_kosmix_kosmosfs_access_KfsAccess_create(
-        JNIEnv *jenv, jclass jcls, jlong jptr, jstring jpath, jint jnumReplicas, jboolean jexclusive);
+        JNIEnv *jenv, jclass jcls, jlong jptr, jstring jpath, jint jnumReplicas, jboolean jexclusive, jstring jhandler);
 
     jlong Java_org_kosmix_kosmosfs_access_KfsAccess_setDefaultIoBufferSize(
         JNIEnv *jenv, jclass jcls, jlong jptr, jlong jsize);
@@ -389,13 +389,24 @@ jint Java_org_kosmix_kosmosfs_access_KfsOutputChannel_close(
 }
 
 jint Java_org_kosmix_kosmosfs_access_KfsAccess_create(
-    JNIEnv *jenv, jclass jcls, jlong jptr, jstring jpath, jint jnumReplicas, jboolean jexclusive)
+    JNIEnv *jenv, jclass jcls, jlong jptr, jstring jpath, jint jnumReplicas, jboolean jexclusive,jstring jhandler)
 {
     KfsClient *clnt = (KfsClient *) jptr;
 
     string path;
     setStr(path, jenv, jpath);
-    return clnt->Create(path.c_str(), jnumReplicas, jexclusive);
+
+	//string a;
+     //   char  * s = jenv->GetStringUTFChars(jhandler, 0);
+     //   a.assign(s);
+     //   jenv->ReleaseStringUTFChars(jhandler, s);
+    string handler;
+    setStr(handler, jenv, jhandler);
+    char *input = new char[handler.size() + 1];
+    std::copy(handler.begin(), handler.end(), input);
+    input[handler.size()] = '\0';
+    std::string sh(input);
+    return clnt->Create(path.c_str(), jnumReplicas, jexclusive, sh);
 }
 
 jint Java_org_kosmix_kosmosfs_access_KfsAccess_remove(

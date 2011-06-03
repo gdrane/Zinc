@@ -79,7 +79,7 @@ public class KfsAccess
     int setModificationTime(long ptr, String path, long msecs);
 
     private final static native
-    int create(long ptr, String path, int numReplicas, boolean exclusive);
+    int create(long ptr, String path, int numReplicas, boolean exclusive,String handle);
 
     private final static native
     int remove(long ptr, String path);
@@ -226,21 +226,21 @@ public class KfsAccess
         return new KfsOutputChannel(cPtr, fd);
     }
 
-    public KfsOutputChannel kfs_create(String path)
+    public KfsOutputChannel kfs_create(String path,String handle)
     {
-        return kfs_create(path, 1);
+        return kfs_create(path, 1,handle);
     }
 
-    public KfsOutputChannel kfs_create(String path, int numReplicas)
+    public KfsOutputChannel kfs_create(String path, int numReplicas,String handle)
     {
-        return kfs_create(path, numReplicas, false);
+        return kfs_create(path, numReplicas, false,handle);
     }
 
     // if exclusive is specified, then create will succeed only if the
     // doesn't already exist
-    public KfsOutputChannel kfs_create(String path, int numReplicas, boolean exclusive)
+    public KfsOutputChannel kfs_create(String path, int numReplicas, boolean exclusive,String handle)
     {
-        int fd = create(cPtr, path, numReplicas, exclusive);
+        int fd = create(cPtr, path, numReplicas, exclusive, handle);
         if (fd < 0)
             return null;
         return new KfsOutputChannel(cPtr, fd);
@@ -252,9 +252,9 @@ public class KfsAccess
     }
 
     public KfsOutputChannel kfs_create(String path, int numReplicas, boolean exclusive,
-        long bufferSize, long readAheadSize)
+        long bufferSize, long readAheadSize,String handle)
     {
-        int fd = create(cPtr, path, numReplicas, exclusive);
+        int fd = create(cPtr, path, numReplicas, exclusive,handle);
         if (fd < 0)
             return null;
         if (bufferSize >= 0) {

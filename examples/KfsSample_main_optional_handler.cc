@@ -178,6 +178,7 @@ main(int argc, char **argv)
     off_t sz = statInfo.st_size;
 
     cout<< "Optional Handler" << gKfsClient->GetOptionalHandler(tempFn.c_str()) << endl;
+    cout<< "Optional Handler for /user/gauresh/asdf" << gKfsClient->GetOptionalHandler("/user/gauresh/asdf") << endl;
     
     if (sz != numBytes) {
         cout << "KFS thinks the file's size is: " << sz << " instead of " << numBytes << endl;
