@@ -70,7 +70,7 @@ class ZincLoggerFactory {
 
 #ifndef KFS_LOG_VA_APP_PRIORITY
 #   define KFS_LOG_VA_APP_PRIORITY(appName,logLevel,fileName, msg, ...) \
-            ZincLoggerFactory::getInstance()->getZincLogger(appName,logLevel,fileName)->Append(logLevel, "(%s:%d) " \
+            KFS::ZincLoggerFactory::getInstance()->getZincLogger(appName,logLevel,fileName)->Append(logLevel, "(%s:%d) " \
                 msg, THIS_FILE, __LINE__, __VA_ARGS__)
 
 #endif
