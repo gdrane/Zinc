@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wall -DBOOST_SP_USE_QUICK_ALLOCATOR -g   CMakeFiles/kfsping.dir/kfsping_main.o  -o kfsping -rdynamic libtools.a ../libkfsClient/libkfsClient.a ../libkfsIO/libkfsIO.a ../common/libkfsCommon.a -lpthread /home/sumedh/study/dev/boost/stage/lib/libboost_regex.a -lrt -lz ../qcdio/libqcdio.a -lcrypto 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wall -DBOOST_SP_USE_QUICK_ALLOCATOR -g   CMakeFiles/metaserver.dir/metaserver_main.o  -o metaserver -rdynamic libkfsMeta.a ../libkfsIO/libkfsIO.a ../common/libkfsCommon.a ../qcdio/libqcdio.a -lpthread -lcrypto -lrt /home/sumedh/study/dev/boost/stage/lib/libboost_regex.a -lz -lrt 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -Wall -DBOOST_SP_USE_QUICK_ALLOCATOR -g  -shared -Wl,-soname,libkfsEmulator.so -o libkfsEmulator.so CMakeFiles/kfsEmulator-shared.dir/ChunkServerEmulator.o CMakeFiles/kfsEmulator-shared.dir/LayoutEmulator.o CMakeFiles/kfsEmulator-shared.dir/EmulatorSetup.o 

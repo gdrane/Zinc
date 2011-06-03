@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wall -DBOOST_SP_USE_QUICK_ALLOCATOR -g   CMakeFiles/telemetry_server.dir/telemetry_server_main.o  -o telemetry_server -rdynamic ../common/libkfsCommon.a ../qcdio/libqcdio.a -lpthread -lrt 

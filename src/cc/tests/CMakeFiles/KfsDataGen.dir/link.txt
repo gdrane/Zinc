@@ -1,0 +1,1 @@
+/usr/bin/c++    -Wall -DBOOST_SP_USE_QUICK_ALLOCATOR -g   CMakeFiles/KfsDataGen.dir/KfsDataGen_main.o  -o KfsDataGen -rdynamic ../tools/libtools.a ../libkfsClient/libkfsClient.a ../libkfsIO/libkfsIO.a ../common/libkfsCommon.a -lpthread /home/sumedh/study/dev/boost/stage/lib/libboost_regex.a -lrt -lz ../qcdio/libqcdio.a -lcrypto 

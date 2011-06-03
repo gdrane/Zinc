@@ -1,0 +1,2 @@
+/usr/bin/ar cr libqcdio.a  CMakeFiles/qcdio.dir/qcthread.o CMakeFiles/qcdio.dir/qcunittest.o CMakeFiles/qcdio.dir/qcmutex.o CMakeFiles/qcdio.dir/qcutils.o CMakeFiles/qcdio.dir/qciobufferpool.o CMakeFiles/qcdio.dir/qcdiskqueue.o CMakeFiles/qcdio.dir/qcfdpoll.o
+/usr/bin/ranlib libqcdio.a

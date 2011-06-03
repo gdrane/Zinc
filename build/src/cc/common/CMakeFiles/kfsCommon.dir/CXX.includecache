@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gauresh/spring2011/cloud/project/kosmosfs/zynx/src/cc/common/Version.cc
+Version.h
+/home/gauresh/spring2011/cloud/project/kosmosfs/zynx/src/cc/common/Version.h
+
+/home/gauresh/spring2011/cloud/project/kosmosfs/zynx/src/cc/common/Version.h
+string
+-
+

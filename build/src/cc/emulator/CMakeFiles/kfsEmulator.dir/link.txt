@@ -1,0 +1,2 @@
+/usr/bin/ar cr libkfsEmulator.a  CMakeFiles/kfsEmulator.dir/ChunkServerEmulator.o CMakeFiles/kfsEmulator.dir/LayoutEmulator.o CMakeFiles/kfsEmulator.dir/EmulatorSetup.o
+/usr/bin/ranlib libkfsEmulator.a
