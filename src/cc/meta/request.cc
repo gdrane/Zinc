@@ -330,8 +330,8 @@ MetaLookup::handle()
 	KFS_LOG_STREAM_DEBUG << "Optional Handler " << fa->optionalHandler <<
 		KFS_LOG_EOM;
 	ZincHandler *znc = ZincHandler::getInstance();
-	znc->runHandler(fa->optionalHandler, "read"); 
-
+        if (!fa->optionalHandler.empty())
+   	znc->runHandler(fa->optionalHandler, "read"); 
 	}
 
 

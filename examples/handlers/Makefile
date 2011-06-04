@@ -19,7 +19,7 @@ handler:
 	gcc -g -shared -Wl,-soname,GMAIL.so -o GMAIL.so BufferedLogWriter.o zinc.o qcmutex.o qcthread.o logHandler.o
 
 clean:	
-	rm *.o run
+	rm *.o *.so run
 
 $(EXECUTABLE): $(OBJECTS)
 	$(CXX) $(OBJECTS) $(LDFLAGS) $(DEBUG) -o $(EXECUTABLE)

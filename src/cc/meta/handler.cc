@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const string ZincHandler::path = "/home/gauresh/spring2011/cloud/project/kosmosfs/zynx/examples/handlers/";
+const string ZincHandler::path = "/home/gauresh/sowmya/Zinc/examples/handlers/";
 const string ZincHandler::lib_ext = ".so";
 ZincHandler* ZincHandler::handler = NULL;
 
@@ -44,7 +44,7 @@ ZincHandler:: runHandler (const std::string handler_key,const std::string event)
 	       fprintf(stderr, "%s\n", error);
 	       return;
 	    }
-
+	    if(fn != NULL)
 	    (*fn)(); 
     }
 
