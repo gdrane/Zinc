@@ -4,6 +4,7 @@ set (lib_src
     BufferedLogWriter.cc 
     hsieh_hash.cc
     log.cc
+    zinc.cc
     properties.cc
 )
 

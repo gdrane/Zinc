@@ -39,6 +39,7 @@
 
 #include "libkfsIO/Globals.h"
 #include "common/log.h"
+#include "handler.h"
 
 using std::map;
 using std::string;
@@ -328,7 +329,12 @@ MetaLookup::handle()
 	if (fa != NULL) {
 	KFS_LOG_STREAM_DEBUG << "Optional Handler " << fa->optionalHandler <<
 		KFS_LOG_EOM;
+	ZincHandler *znc = ZincHandler::getInstance();
+	znc->runHandler(fa->optionalHandler, "read"); 
+
 	}
+
+
 
 	status = (fa == NULL) ? -ENOENT : 0;
 	result = FattrReply(fa);
