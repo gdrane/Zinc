@@ -25,6 +25,7 @@ class ZincLogger : public BufferedLogWriter
 			kLogLevelDEBUG
 		#endif
 		, std::string f = ""); 
+	
         ~ZincLogger();
         inline ZincLogger(const ZincLogger &other) {
 		this->appName = other.appName;
@@ -42,7 +43,7 @@ class ZincLoggerFactory {
 	
 	private:
 		
-
+		
 		ZincLoggerFactory();
 		~ZincLoggerFactory();
 		
@@ -61,6 +62,7 @@ class ZincLoggerFactory {
 
 
 		void Stop();
+		
 		
 	};
 
@@ -129,4 +131,3 @@ class ZincLoggerFactory {
 }
 
 #endif // _INC_ZINC_H_
-

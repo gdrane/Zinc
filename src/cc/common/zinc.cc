@@ -30,14 +30,17 @@ ZincLoggerFactory* ZincLoggerFactory::zincLoggerFactory = NULL;
 ZincLoggerFactory*
 ZincLoggerFactory::getInstance()
 {
-	if(!instanceFlag) {
+	if(zincLoggerFactory == NULL) {
 		zincLoggerFactory = new ZincLoggerFactory();
-		instanceFlag = true;
-		return zincLoggerFactory;
 	}
 	return zincLoggerFactory;
 }
 
+ZincLoggerFactory :: ZincLoggerFactory() {
+}
+
+ZincLoggerFactory :: ~ZincLoggerFactory(){
+}
 
 ZincLogger*
 ZincLoggerFactory :: getZincLogger(std::string appName, BufferedLogWriter::LogLevel logLevel, std::string fileName) {

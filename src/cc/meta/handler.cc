@@ -4,7 +4,7 @@
 
 using namespace std;
 
-const string ZincHandler::path = "/usr/local/";
+const string ZincHandler::path = "/home/gauresh/spring2011/cloud/project/kosmosfs/zynx/examples/handlers/";
 const string ZincHandler::lib_ext = ".so";
 ZincHandler* ZincHandler::handler = NULL;
 

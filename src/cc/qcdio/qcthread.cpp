@@ -41,7 +41,8 @@ public:
           mCount(0)
         {}
     ~QCStartedThreadList()
-        { QCASSERT(mCount == 0); }
+        { //QCASSERT(mCount == 0);
+	 }
     void Insert(
         QCThread& inThread)
     {

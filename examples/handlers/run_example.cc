@@ -2,5 +2,5 @@
 
 int main()	{
 	ZincHandler *znc = ZincHandler::getInstance();
-	znc->runHandler("GMAIL:firstLog:read", "read"); 
+	znc->runHandler("GMAIL:_Z8firstLogv:read", "read"); 
 }
